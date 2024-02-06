@@ -119,39 +119,38 @@ line-height: 1.2;
 }
 
 .godsmsg{
-  text-align: center;
-  margin: auto;
-  width: 50%
-  animation: fadetext 3s;  
+text-align: center;
+margin: auto;
+width: 50%
+animation: fadetext 3s;  
 }
 
 .godsmsg h1{
-  color: #aa9055;
-  font-weight: 300;
-    line-height: 1.2;
-    font-size: 50px;
+color: #aa9055;
+font-weight: 300;
+line-height: 1.2;
+font-size: 50px;
 }
 
 .godsmsg p{
-  font-size: 1.25rem;
-    font-weight: 300;
-    line-height: 1.5;
+font-size: 1.25rem;
+font-weight: 300;
+line-height: 1.5;
 }
 
 @keyframes fadetext{
-    0%{
-        opacity: 0;
-      transform: translateY(100px);
-    }
-    100%{
-        opacity: 1;
+0%{
+opacity: 0;
+transform: translateY(100px);}
+100%{
+opacity: 1;
 transform: translateY(0);
 }
 }
 
 
-      /* home css */
-  .footer{
+/* home css */
+.footer{
 padding: 3px;
 background: #8c6900;
 text-transform: capitalize;
@@ -260,24 +259,23 @@ border-bottom: solid 1px #fff;
 }
 }
 
-    @media(max-width:768px){
-      .navfooter{
-        flex-direction: column;
-   }
+@media(max-width:768px){
+.navfooter{
+flex-direction: column;
+}
 
-      .navfooter img{
-        width: 444px;
-        margin: auto;   
-      }
-    }
-    @media(max-width:500px){
-      
-
-      .navfooter img{
-        width: 400px;
-      }
-    }
-    /* footer css stops here */
+.navfooter img{
+width: 444px;
+margin: auto;   
+}
+}
+   
+@media(max-width:500px){
+.navfooter img{
+width: 400px;
+}
+}
+/* footer css stops here */
     
     .error{
     line-height: 2;
