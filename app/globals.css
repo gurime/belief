@@ -122,6 +122,7 @@ line-height: 1.2;
   text-align: center;
   margin: auto;
   width: 50%
+  animation: fadetext 3s;  
 }
 
 .godsmsg h1{
@@ -137,10 +138,6 @@ line-height: 1.2;
     line-height: 1.5;
 }
 
-.godmsg{
-    animation: fadetext 3s;  
-}
-
 @keyframes fadetext{
     0%{
         opacity: 0;
@@ -148,8 +145,8 @@ line-height: 1.2;
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
-    }
+transform: translateY(0);
+}
 }
 
 
