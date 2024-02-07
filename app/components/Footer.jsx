@@ -19,19 +19,17 @@ return (
 
 
 <footer className="footer">
-{/* <div className="support-itruth-box">
-<div className="support-headline">Support iTruth News</div>
-<div className="support-subtitle">iTruth News works hard to bring <br/> you the news you care about.</div>
+<div className="support-itruth-box">
+
 <div className="support-flex-box">
-<button onClick={() => router.push('/pages/Contribute')} id="subbtn1"  >Contribute</button>
-<div style={{width: "2rem"}}></div>
+<button /*onClick={() => router.push('/pages/Donate')} */id="subbtn1"  >Donate Now</button>
 </div>
     
     
 
 
 
-</div> */}
+</div>
 
 <div className="flex-footer">
 <div className="footer-tablebox"> 
@@ -156,7 +154,6 @@ return (
 
 
 <div className="navlinks sm-navlink" style={{flexWrap:'nowrap'}}>
-<Link  href='/pages/Contact'>Contact iTruth News</Link>
 
 <Link  href='/pages/Terms'>terms of Use</Link>
 

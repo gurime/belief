@@ -12,13 +12,15 @@ padding: 1rem;
 display:flex;
 background-size: cover;
 background-position: center;
+background-attachment: fixed;
 height: 600px;
+justify-content: space-around;
 }
 
 .nav img{
 padding:0 1rem;
 cursor: pointer;
-margin-right: auto;
+/* margin-right: auto; */
 }
   
 .sm-name{
@@ -52,6 +54,7 @@ flex-direction: column;
 padding: 0 1rem;
 align-items: center;
 height: 200px;
+background-attachment:inherit;
 }
 
 .navlinks{
@@ -121,8 +124,8 @@ line-height: 1.2;
 .godsmsg{
 text-align: center;
 margin: auto;
-width: 50%
-animation: fadetext 3s;  
+width: 50%;
+animation: fadetext 1.7s;  
 }
 
 .godsmsg h1{
@@ -148,8 +151,158 @@ transform: translateY(0);
 }
 }
 
+.flexpastor {
+display: flex;
+background-color: #dfdfdf;
+margin-bottom: 3rem;
+height: auto;
+width: auto;
+align-items: center;
+}
+
+.pastor-img{
+margin-bottom: 1rem;
+}
+
+.events-tagline{
+display: grid;
+background-color: #dedede;
+color: #9e7b11;
+height: 350px;
+width: 100%;
+place-items: center;
+text-transform: uppercase;
+letter-spacing: 5px;
+border-bottom: solid 1px #9e7b11;
+}
+
+.events-tagline h1{
+font-weight: 300;
+font-size: 2.5rem;
+}
+
+.event-section{
+display: grid;
+place-items: center;
+place-content: center;
+grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+gap: .5em;
+padding: .8rem 0;
+text-align: center;
+margin-bottom: 2rem;
+}
+
+.card{
+    width: 350px;
+    padding: 1rem 0;
+    margin: .3rem 0;
+    text-transform: uppercase;
+}
+
+.card-title{
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.lead{
+    font-size: 1.25rem;
+        font-weight: 300;
+    
+}
+
+.card-btn{
+    background-color: #835e0a;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    width: 50%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    margin: auto;
+}
+
+.card-btn:hover{
+    background-color: #dc9b09;
+    
+}
+
+@media(max-width:1630px){
+.flexpastor{
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+}
+
+@media(max-width:1000px){
+.pastor-img img{
+height: auto;
+width: 100%;
+}
+}
+
+
+
 
 /* home css */
+
+.flex-visit-block{
+    text-align: center;
+    width: 75%;
+}
+
+.flex-visit-block p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    line-height: 40px;
+}
+
+
+
+.join-container{
+    display: flex;
+    align-items: center;
+    padding:  1rem;
+}
+
+
+.join-container img{
+    width: 100%;
+    height: auto;
+}
+
+.join-title {
+    background-color: #fff;
+    width: 100%;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.join-title h1{
+    text-align: center;
+    color: #9e7b11;
+    font-weight: 300;
+    margin-top: 20%;
+}
+
+.join-title p{
+    text-align: center;
+    line-height: 40px;
+
+}
+
+@media(max-width:1300px){
+.join-container {
+flex-direction: column;
+}
+
+.sec-join-container{
+    flex-direction: column-reverse;
+}
+}
+/* visit us css stops here */
 .footer{
 padding: 3px;
 background: #8c6900;
@@ -167,27 +320,22 @@ margin-bottom: 2rem;
 letter-spacing: 2px;
 }
 
-.support-subtitle{
-margin-bottom: 2rem;
-color: #fff;
-font-size: 16px;
-line-height: 1.5;
-}
+
 
 .support-flex-box{
 margin-bottom: 2rem;
+padding: 1rem 0 0 0;
 }
       
 .support-flex-box button{
-border: 0;
-border-radius: 20px;
-background-color: #0d6efd;
-text-transform: capitalize;
-line-height: 1.5;
-font-size: 17px;
-letter-spacing: 3px;
+background-color: #ffb300;
+border: none;
 color: #fff;
-cursor: pointer;}
+padding: 1rem;
+text-transform: uppercase;
+cursor: pointer;
+transition: .3s;
+margin: auto;}
 
 .flex-footer{
 display: flex;
@@ -277,38 +425,38 @@ width: 400px;
 }
 /* footer css stops here */
     
-    .error{
-    line-height: 2;
-    text-align: center;
-    letter-spacing: 1px;
-    color: red;
-    }
-    .success{
-    line-height: 2;
-    text-align: center;
-    letter-spacing: 1px;
-    color: green;
-    }
-      
-    .submitbtn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    }
-    
-    .password-strength {
-    margin-top: 8px;
-    font-size: 14px;
-    }
-      
-    .weak {
-    color: red;
-    }
-      
-    .moderate {
-    color: #ffa600;
-    }
-      
-    .strong {
-    color: green;
-    }
+.error{
+line-height: 2;
+text-align: center;
+letter-spacing: 1px;
+color: red;
+}
+.success{
+line-height: 2;
+text-align: center;
+letter-spacing: 1px;
+color: green;
+}
+  
+.submitbtn:disabled {
+opacity: 0.5;
+cursor: not-allowed;
+}
+
+.password-strength {
+margin-top: 8px;
+font-size: 14px;
+}
+  
+.weak {
+color: red;
+}
+  
+.moderate {
+color: #ffa600;
+}
+  
+.strong {
+color: green;
+}
     

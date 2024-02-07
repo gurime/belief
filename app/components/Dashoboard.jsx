@@ -1,5 +1,8 @@
+import Image from 'next/image'
 import React from 'react'
-
+import pastor from '../img/pssd.png'
+import Link from 'next/link'
+import bib from '../img/sunay-school.png'
 export default function Dashboard() {
 return (
 <>
@@ -24,6 +27,42 @@ color: '#4f3a0b',
 <p>[1 CORINTHIANS 10:13]</p>
 </div>
 </div>
+
+<div className='flexpastor'>
+<div className='pastor-img'>
+<Image src={pastor} alt='...'></Image>
+
+</div>
+<div className="flex-pastor-block">
+<h1  style={{color: "#9e7b11",fontSize:'3.5rem',textAlign: 'center',fontWeight:'300'}}>Pastor <br/> John Doe</h1>
+<p style={{
+width:'50%',
+margin:'auto',
+fontSize:'1.25rem',
+fontWeight:'300',
+lineHeight:'30px'
+
+}}  >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio porro reprehenderit corrupti quod a incidunt harum inventore natus sint illo, voluptate repellat dolores iste adipisci id atque recusandae illum.</p>
+</div>
+</div>
+
+<section  className="events-tagline">
+<h1  style={{color:'#9e7b11'}}>Upcoming Events</h1>
+</section>  
+
+
+<div className="event-section">
+<div className="card">
+{/* <div class="card-img1"></div> */}
+<Image src={bib} width={300} alt='...'/>
+<div className="card-title ">
+<p className=" lead">Bible Study</p></div>
+<div className="card-date">July 09, 2030</div>
+<button className="card-btn">register now</button>
+</div>  
+</div>
+
+
 </>
 )
 }
