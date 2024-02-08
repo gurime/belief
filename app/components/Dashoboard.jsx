@@ -1,9 +1,44 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import pastor from '../img/pssd.png'
 import Link from 'next/link'
-import bib from '../img/sunay-school.png'
+import { db } from '../config/firebase';
+import { collection, getDocs } from 'firebase/firestore';
+
+async function getArticles(orderBy) {
+
+    const querySnapshot = await getDocs(collection(db,"events"));
+    const data = [];
+    querySnapshot.forEach((doc) => {
+    data.push({ id: doc.id, ...doc.data() });
+    });
+    return data;
+}
 export default function Dashboard() {
+    const [fetchError, setFetchError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [useArticle, setUseArticle] = useState([]);
+  
+       
+    
+    
+    
+    useEffect(() => {
+    const fetchData = async () => {
+    try {
+    const data = await getArticles();
+    
+    setUseArticle(data);
+    } catch (error) {
+    setFetchError('Error fetching articles. Please try again later.');
+    } finally {
+    setLoading(false); 
+    }
+    };
+      
+    fetchData();
+    }, [])
 return (
 <>
 <div style={{
@@ -52,14 +87,16 @@ lineHeight:'30px'
 
 
 <div className="event-section">
-<div className="card">
-{/* <div class="card-img1"></div> */}
-<Image src={bib} width={300} alt='...'/>
-<div className="card-title ">
-<p className=" lead">Bible Study</p></div>
-<div className="card-date">July 09, 2030</div>
-<button className="card-btn">register now</button>
-</div>  
+  {useArticle.map((blog) => (
+    <div className="card" key={blog.id}>
+      <img src={blog.cover_img}   alt='...' />
+      <div className="card-title">
+        <p className="lead">{blog.subtitle}</p>
+      </div>
+      <div className="card-date">{blog.date}</div>
+      <button className="card-btn">{blog.register}</button>
+    </div>
+  ))}
 </div>
 
 

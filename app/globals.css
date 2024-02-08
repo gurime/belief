@@ -226,6 +226,12 @@ margin-bottom: 2rem;
     background-color: #dc9b09;
     
 }
+.card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 333px;
+  }
 
 @media(max-width:1630px){
 .flexpastor{
@@ -248,49 +254,111 @@ width: 100%;
 /* home css */
 
 .flex-visit-block{
-    text-align: center;
-    width: 75%;
+text-align: center;
+width: 75%;
 }
 
 .flex-visit-block p{
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    line-height: 40px;
+font-size: 1.25rem;
+font-weight: 300;
+margin-bottom: 1rem;
+line-height: 40px;
 }
 
 
 
 .join-container{
-    display: flex;
-    align-items: center;
-    padding:  1rem;
+display: flex;
+align-items: center;
+padding:  1rem;
 }
 
 
 .join-container img{
-    width: 100%;
-    height: auto;
+width: 100%;
+height: auto;
 }
 
 .join-title {
-    background-color: #fff;
-    width: 100%;
-    margin-right: 2rem;
-    margin-left: 2rem;
+background-color: #fff;
+width: 100%;
+margin-right: 2rem;
+margin-left: 2rem;
 }
 
 .join-title h1{
-    text-align: center;
-    color: #9e7b11;
-    font-weight: 300;
-    margin-top: 20%;
+text-align: center;
+color: #9e7b11;
+font-weight: 300;
+margin-top: 20%;
 }
 
 .join-title p{
-    text-align: center;
-    line-height: 40px;
+text-align: center;
+line-height: 40px;
+}
 
+.visitform{
+display:grid;
+margin: auto;
+width: 50%;
+padding:2px}
+    
+.visitform input{
+height:46px;
+font-size: 15px;
+outline: none;
+background: transparent;
+border: none;
+margin-bottom:24px}
+
+.visitform input:hover{
+border-bottom: solid 1px #000;
+}
+
+
+.visitform label{
+color:#5a471d;
+line-height:40px}
+    
+.visitform p a{
+color:#fff;
+text-decoration:none}
+    
+    .contact-btn{
+border-width:0;
+background:linear-gradient(90deg,#74722a 0,#ac9e23 100%);
+width:211px;
+height:64px;
+text-align:center;
+font-size:24px;
+outline:0;
+color: #fff;
+text-decoration: none;
+letter-spacing: 3px;
+transition: 0.5s;
+cursor:pointer;
+margin:3rem auto}
+    
+.contact-btn:hover{
+opacity: 0.5;
+}
+
+ .visitform textarea{
+margin-bottom: 3rem;
+resize: none;   
+font-size: 15px;
+outline: none;
+width: 100%;
+}
+
+.successVisit{
+display: grid;
+height: 100svh;
+place-items: center;
+background: linear-gradient(to bottom, #000000a6, #000000a6),url("./img/church-events.jpg");
+background-size: cover;
+background-position: center;
 }
 
 @media(max-width:1300px){
@@ -299,10 +367,39 @@ flex-direction: column;
 }
 
 .sec-join-container{
-    flex-direction: column-reverse;
+flex-direction: column-reverse;
+}
+}
+
+@media(max-width:768px){
+.visitform{
+width: 86%;
+margin: auto;
+padding: 0 15px;
+}
+
+.successVisit img{
+    width: 385px;
+}
+
+.visitform textarea{
+width: 100%;
+}
+
+.sec-join-container{
+flex-direction: column-reverse;
 }
 }
 /* visit us css stops here */
+
+.event-section-list {
+    display: flex;
+    place-items: center;
+    place-content: center;
+   ;
+  }
+
+/* events css stops here */
 .footer{
 padding: 3px;
 background: #8c6900;
