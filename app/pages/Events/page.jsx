@@ -1,5 +1,5 @@
 import Footer from '@/app/components/Footer'
-import Navbar from '@/app/components/Navbar'
+import Navbar from '@/app/components/navbar'
 import React from 'react'
 import EventsList from './EventsList'
 

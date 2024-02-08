@@ -1,5 +1,5 @@
 import Footer from '@/app/components/Footer'
-import Navbar from '@/app/components/Navbar'
+import Navbar from '@/app/components/navbar'
 import Image from 'next/image'
 import React from 'react'
 import history from '../../img/history-church.png'

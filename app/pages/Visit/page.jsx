@@ -4,7 +4,7 @@ import pastor from '../../img/church-bg.jpg'
 import visitbib from '../../img/visit-bible.jpeg'
 import visitchoir from '../../img/visit-choir.jpeg'
 import VisitForm from './VisitForm'
-import Navbar from '@/app/components/Navbar'
+import Navbar from '@/app/components/navbar'
 import Footer from '@/app/components/Footer'
 
 
